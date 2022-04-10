@@ -70,11 +70,17 @@ svg {
   fill:white;
 }
 
-.message {
-  color:white;
+.message, .message2, .message3 {
+  color: white;
+  font-family: monospace;
   font-size: 2em;
-  margin: 1em 0;
+  margin: 1em auto;
+  max-width: 800px;
+  line-height: 1.5;
+  text-align: center;
+
 }
+
 #box.fade {
   opacity: 0;
 }

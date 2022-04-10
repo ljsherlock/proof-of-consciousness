@@ -91,9 +91,8 @@ const lerp = function(a,b,u) {
   
   // $("#box").fadeOut();
   
-  var box2 = document.querySelector("#box2")
+  var box2 = document.querySelector("body")
   let randomRGBBox2 = randomRGBGenerator();
-  
   box2.style.backgroundColor = 'rgb('+randomRGBBox2.r+','+randomRGBBox2.g+','+randomRGBBox2.b+')'
   
   // function deltaRgb22 (rgb1, rgb2) {
@@ -160,6 +159,10 @@ const lerp = function(a,b,u) {
         var i = deltaLKlsl * deltaLKlsl + deltaCkcsc * deltaCkcsc + deltaHkhsh * deltaHkhsh;
         return i < 0 ? 0 : Math.sqrt(i);
       }
+
+    function hideOrb() {
+        document.querySelector('.orb').style.display = 'none';
+    }
     
     startTimer = function()
     {
@@ -177,10 +180,13 @@ const lerp = function(a,b,u) {
         seconds +=  fadeDuration / 1000;
         
         if (rangecolor >= 0 && rangecolor <= 10){
-            $(".message").text(`Congratulations! ${seconds} seconds. Colour match 
-            within range qualifying for Proof of Magician status.`)
+          stopRecording();  
+          $(".message2").text(`Congratulations! ${seconds} seconds. Colour match 
+            within range qualifying for Proof of Magician status.`);
+            $(".message3").text('Download and send us this video to get your Proof of Magician NFT. ');
             stopTimer()
             $("#box").fadeIn();
+            hideOrb();
             return false
         }
     
@@ -216,6 +222,7 @@ const lerp = function(a,b,u) {
     
     stopTimer = function()
     {   
+        hideOrb();
         startBtn.removeAttribute("disabled");
         stopBtn.removeAttribute("enabled");
         stopBtn.setAttribute("disabled", "disabled");
@@ -224,13 +231,10 @@ const lerp = function(a,b,u) {
     }
     
     startBtn.addEventListener("click", function() {
-        startTimer()
         stopBtn.removeAttribute("disabled");
         startBtn.removeAttribute("enabled");
         startBtn.setAttribute("disabled", "disabled");
         stopBtn.setAttribute("enabled", "enabled");
-    
-    
     });
     
     stopBtn.addEventListener("click", stopTimer);

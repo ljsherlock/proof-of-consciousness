@@ -1,0 +1,142 @@
+.pop_up{
+  position: relative;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.videoPlayer{
+  position: relative;
+  max-width: 650px;
+}
+.close_video{
+  position: absolute;
+  right: 10px;
+  padding: 10px;
+  margin: 0;
+  color: white;
+  font-size: 20px;
+  font-family: inherit;
+  cursor: pointer;
+  top: -10px;
+}
+#p3d-embed {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 0;
+        margin: 0;
+        background-color: transparent;
+        z-index: 0;
+        cursor: pointer;
+}
+#overlay {
+        margin: auto;
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 20%;
+        top: 90%;
+        bottom: 0;
+        border: 0;
+        background-color: transparent;
+        transform: translate(0%, 0%);
+        z-index: 2;
+        cursor: pointer;
+        allowtransparency: true;
+}
+#overlay-content {
+        margin: auto;
+        text-align: center;
+        background-color: transparent;
+        width: 100%;
+        height: 20%;
+        border: 0;
+        allowtransparency: true;
+}
+a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #222222;
+  font-size: 16px;
+  text-color: white;
+}
+
+a:hover {
+  background-color: #ffffff;
+  color: white;
+}
+
+.previous {
+  background-color: #888888;
+  color: white;
+}
+
+.next {
+  background-color: #888888;
+  color: white;
+}
+.pop_up button{
+  background-color: #5E8D63;
+  color: white;
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;
+}
+.pop_up button:hover{
+  background-color: #557055;
+}
+.pop_up .download-btn{
+  padding: 10px 15px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-family: monospace;
+  margin-top: 1em;
+  width: 300px;
+}
+
+.pop_up .download-btn:hover{
+  /* background-color: #5E8D63; */
+}
+
+.round {
+  border-radius: 50%;
+}
+.info-box-container {
+position: absolute;
+top: 1em;
+left: 0;
+height: auto;
+width: 100%;
+z-index: 500;
+user-select: none;
+}
+
+.info-box {
+position: absolute;
+left: 50%;
+transform: translate(-50%, 0);
+background: rgba(0,0,0,.4);
+border-radius: .25rem;
+font-size: 1.0rem;
+color: #fff;
+padding: .25rem .5rem;
+text-align: center;
+white-space: nowrap;
+}
